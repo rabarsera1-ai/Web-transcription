@@ -1,0 +1,19 @@
+function nextPage(pageNumber) {
+  let pages = document.querySelectorAll(".page");
+
+  pages.forEach(page => page.classList.add("hidden"));
+
+  document.getElementById("page" + pageNumber).classList.remove("hidden");
+}
+
+function finish() {
+  let name = document.getElementById("name").value;
+  let age = document.getElementById("age").value;
+  let exp = document.getElementById("experience").value;
+  let source = document.getElementById("source").value;
+
+  nextPage(6);
+
+  document.getElementById("summary").innerText =
+    `Name: ${name}, Age: ${age}, Experience: ${exp}, Source: ${source}`;
+}

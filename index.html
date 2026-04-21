@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Web Transcribe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Page 1 -->
+  <div id="page1" class="page">
+    <img src="https://via.placeholder.com/100" alt="logo">
+    <h1>Welcome to Web Transcribe</h1>
+    <button onclick="nextPage(2)">Get Started</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="page hidden">
+    <h2>Enter your details</h2>
+    <input type="text" id="name" placeholder="Full Name"><br>
+    <input type="number" id="age" placeholder="Age"><br>
+    <button onclick="nextPage(3)">Next</button>
+  </div>
+
+  <!-- Page 3 -->
+  <div id="page3" class="page hidden">
+    <h2>Your Experience</h2>
+    <select id="experience">
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Expert</option>
+    </select><br>
+    <button onclick="nextPage(4)">Next</button>
+  </div>
+
+  <!-- Page 4 -->
+  <div id="page4" class="page hidden">
+    <h2>Where did you hear about us?</h2>
+    <input type="text" id="source" placeholder="e.g TikTok"><br>
+    <button onclick="nextPage(5)">Next</button>
+  </div>
+
+  <!-- Page 5 -->
+  <div id="page5" class="page hidden">
+    <h2>Upload your photo</h2>
+    <input type="file"><br>
+    <button onclick="finish()">Finish</button>
+  </div>
+
+  <!-- Final Page -->
+  <div id="page6" class="page hidden">
+    <h2>Welcome to your dashboard</h2>
+    <p id="summary"></p>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
